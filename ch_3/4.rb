@@ -6,7 +6,7 @@ if x < 0 || x >= 100
   puts "範囲外です"
 end
 
-puts "Q2"
+puts "Q2" #三項演算子？
 
 x = 1
 y = 0
