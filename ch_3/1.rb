@@ -1,6 +1,10 @@
 puts "問1"
 a = 2
-puts a < 365
+if a < 365
+  puts "aは365より小さいです。"
+end
 
 puts "問2"
-puts a == 1 + 1
+if a == 1 + 1
+  puts "aは1＋1と等しいです。"
+end

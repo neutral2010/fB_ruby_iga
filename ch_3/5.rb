@@ -1,3 +1,5 @@
+# インデント、変数指定見直す
+
 season = "春"
 
 case season
