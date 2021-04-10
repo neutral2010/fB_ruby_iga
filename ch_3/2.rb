@@ -1,10 +1,8 @@
 puts "問1"
-
+# 後置ifを使ってみる。
 season = "春"
 
-if season != "夏"
-  puts "あんまん食べたい"
-end
+puts "あんまん食べたい" if season != "夏"
 
 puts "問2"
 
