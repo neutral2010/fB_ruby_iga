@@ -7,6 +7,8 @@ puts "問13"
 
 p ["abc", "xyz"].map {|s| s.reverse}
 
+puts "あるいは"
+p ["abc", "xyz"].map(&:reverse)
 
 puts "問14"
 

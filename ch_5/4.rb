@@ -15,6 +15,9 @@ p numbers3.sort{|a,b|b<=>a}
 puts "あるいは"
 p numbers.map { |n| n.to_i }.sort{|a,b|b<=>a}
 
+puts "もっと簡単に"
+p numbers.map { |n| n.to_i }.sort.reverse
+
 
 puts "問9"
 p "cba".reverse

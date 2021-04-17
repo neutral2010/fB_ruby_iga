@@ -13,3 +13,7 @@ numbers.each do |n|
 end
 
 puts sum
+
+puts "もっと簡単に"
+
+puts numbers.sum / numbers.size
