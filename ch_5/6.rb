@@ -13,5 +13,4 @@ p ["abc", "xyz"].map(&:reverse)
 puts "問14"
 
 names = ["aya", "achi", "Tama"]
-
 p names.map { |name| name.downcase}.sort
