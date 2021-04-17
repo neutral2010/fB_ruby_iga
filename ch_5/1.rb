@@ -16,4 +16,4 @@ puts sum
 
 puts "もっと簡単に"
 
-puts numbers.sum / numbers.size
+puts numbers.sum
