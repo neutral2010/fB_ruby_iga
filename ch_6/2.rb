@@ -36,4 +36,3 @@ drink_names.each do |drink_name|
 end
 
 p char_counts
-puts char_counts
