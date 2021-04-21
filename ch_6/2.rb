@@ -14,22 +14,25 @@ puts "紅茶はありませんか？" unless menu.key?('tea')
 
 
 puts "問6"
-menu = { coffee: 300, caffe_latte: 400 }
+menu = { coffee: 300, caffe_latte: 450 }
 # p menu[:caffe_latte]
 
-if menu[:caffe_latte] < 500
-  p
+if menu[:caffe_latte] <= 500
   puts "カフェラテください"
 end
 
 puts "問7"
 
-drink_name = "caffelatte".chars
-p drink_name
+# 空のハッシュを作る。キーが文字、値が回数
+char_counts = {}
+# 値（回数）のデフォルト値を設定しておく
+char_counts.default = 0
 
-hash = {}
+drink_names = "caffelatte".chars
+# drink_namesは区切った一文字ずつが格納された配列。ここでは重複した文字はそのまま入っている。
 
-drink_name.each do |key, value|
-  if key == 0
+drink_names.each do |drink_name|
+  char_counts[drink_name] += 1
+end
 
-  end
+p char_counts
