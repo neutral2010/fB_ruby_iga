@@ -1,6 +1,6 @@
 puts '問6'
 
-def price(item)
+def price(item:)
   case item
   when 'コーヒー'
     puts 300
@@ -9,41 +9,73 @@ def price(item)
   end
 end
 
-price("コーヒー")
+price(item: 'コーヒー')
+price(item: 'カフェラテ')
+
+
+puts "問6の別解答"
+
+def price(item:)
+  items = { "コーヒー" => 300, "カフェラテ" => 400 }
+  items[item]
+end
+
+puts price(item: "コーヒー")
+puts price(item: "カフェラテ")
+
 
 puts '問7'
-# キーワード引数という概念をすっかり忘れていました。
-# 一旦pushしたあと、もう一度考え直します。
 
-item = "コーヒー"
-size = "ベンティ"
-result =
-  case item
-  when "コーヒー"
-    300
-  when "カフェラテ"
-    450
-  end
-puts result
+def price(item:, size:)
+  result =
+    case item
+    when 'コーヒー'
+      300
+    when 'カフェラテ'
+      450
+    end
 
-add_price_result =
-  case size
-  when "ショート"
-    result + 0
-  when "トール"
-    result + 50
-  when "ベンティ"
-    result + 100
-  end
-puts add_price_result
+  add_price_result =
+    case size
+    when 'ショート'
+      result + 0
+    when 'トール'
+      result + 50
+    when 'ベンティ'
+      result + 100
+    end
+end
+
+puts price(item: 'コーヒー', size: 'トール')
+
+
+puts "問7の別解答1"
+
+def price(item:, size:)
+  items = { "コーヒー" => 300, "カフェラテ" => 400 }
+  sizes = { "ショート" => 0, "トール" => 50, "ベンティ" => 100 }
+  items[item] + sizes[size]
+end
+
+puts price(item: 'コーヒー', size: 'トール')
+
+puts "問7の別解答2"
+
+# def price(item:, size:)
+#   items = { "コーヒー": 300, "カフェラテ": 400 }
+#   sizes = { "ショート": 0, "トール": 50, "ベンティ": 100 }
+#   items[item] + sizes[size]
+# end
+#
+# p price(item: 'コーヒー', size: 'トール')
 
 puts "問8"
 
-# キーワード引数という概念をすっかり忘れていました。
-# 一旦pushしたあと、もう一度考え直します。
+def price(item:, size: "ショート")
+  items = { "コーヒー" => 300, "カフェラテ" => 400 }
+  sizes = { "ショート" => 0, "トール" => 50, "ベンティ" => 100 }
+  items[item] + sizes[size]
+end
 
-
-
-
-
-
+puts price(item: 'コーヒー')
+puts price(item: 'カフェラテ', size: 'トール')
