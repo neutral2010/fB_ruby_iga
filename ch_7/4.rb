@@ -23,6 +23,15 @@ end
 puts price(item: "コーヒー")
 puts price(item: "カフェラテ")
 
+puts "問6の別解答の別回答"
+
+def price(item:)
+  items = { コーヒー: 300, "カフェラテ": 400 }
+  items[item]
+end
+
+puts price(item: :コーヒー)
+puts price(item: :カフェラテ)
 
 puts '問7'
 
@@ -61,13 +70,13 @@ puts price(item: 'コーヒー', size: 'トール')
 
 puts "問7の別解答2"
 
-# def price(item:, size:)
-#   items = { "コーヒー": 300, "カフェラテ": 400 }
-#   sizes = { "ショート": 0, "トール": 50, "ベンティ": 100 }
-#   items[item] + sizes[size]
-# end
-#
-# p price(item: 'コーヒー', size: 'トール')
+def price(item:, size:)
+  items = { "コーヒー": 300, "カフェラテ": 400 }
+  sizes = { "ショート": 0, "トール": 50, "ベンティ": 100 }
+  items[item] + sizes[size]
+end
+
+p price(item: :コーヒー, size: :トール)
 
 puts "問8"
 
