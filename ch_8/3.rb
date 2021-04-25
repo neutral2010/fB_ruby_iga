@@ -1,9 +1,9 @@
+puts "問4"
 class Item
   def name
-    return "チーズケーキ"
+    name = "チーズケーキ"
   end
 end
 
-item = Item.new
-t
-puts name()
+item = Item.new()
+puts item.name
