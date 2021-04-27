@@ -4,14 +4,13 @@ class Item
   def name
     @name
   end
-  def name = (text)
-  name = text
+  def name=(text)
+    @name = text
   end
 end
 
 class Food < Item
-
 end
 
-food = Food.new("チーズケーキ")
-p food.name
+food = Food.new
+puts food.name = "チーズケーキ"

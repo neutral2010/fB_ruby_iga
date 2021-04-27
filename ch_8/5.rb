@@ -4,22 +4,22 @@ class Item
   def initialize
     puts "商品を扱うオブジェクト"
   end
-  attr_reader
 end
 
-item = Item.new()
-item.initialize
+Item.new
 
 
 puts "問6"
 class Item
-def initialize(bread)
-  @name = name
-end
-attr_reader :bread
+  def initialize(bread)
+    @name = bread
+  end
+  def name
+    @name
+  end
 end
 
 item1 = Item.new("マフィン")
 item2 = Item.new("スコーン")
-puts item1.initialize
-puts item2.initialize
+puts item1.name
+puts item2.name
